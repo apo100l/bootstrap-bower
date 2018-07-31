@@ -4971,13 +4971,7 @@ angular.module('ui.bootstrap.tooltip', ['ui.bootstrap.position', 'ui.bootstrap.s
     });
 
     function keypressListener(e) {
-      if (e.which === 27) {
-        var last = openedTooltips.top();
-        if (last) {
-          last.value.close();
-          last = null;
-        }
-      }
+
     }
 
     return function $tooltip(ttType, prefix, defaultTriggerShow, options) {
@@ -5391,9 +5385,7 @@ angular.module('ui.bootstrap.tooltip', ['ui.bootstrap.position', 'ui.bootstrap.s
 
             // KeyboardEvent handler to hide the tooltip on Escape key press
             function hideOnEscapeKey(e) {
-              if (e.which === 27) {
-                hideTooltipBind();
-              }
+
             }
 
             var unregisterTriggers = function() {
